@@ -12,14 +12,14 @@
       "name": "Green curry",
       "type": "curry",
       "ethnicity": "thai",
-      "barcode": "5010338303983"
+      "barcode": "0044738102353"
     },
     {
       "id": 4,
       "name": "Ravioli Funghi",
       "type": "pasta",
       "ethnicity": "italian",
-      "barcode": "8001665127585"
+      "barcode": "8710400274117"
      },
     {
       "id": 5,
@@ -29,10 +29,10 @@
       "barcode": "5000169116562"
     },
     {
-      "name": "Cortado",
+      "name": "taco",
       "type": "beef",
       "ethnicity": "mexican",
-      "barcode": "2350320003464",
+      "barcode": "8410076472120",
       "id": 6
     },
     {
