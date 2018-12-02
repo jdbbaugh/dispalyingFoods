@@ -2,7 +2,7 @@
 let barcodeForFetch = ''
 
 
-let foodFactory = (name, type, ethnic, barcode, jsonResponse) => {
+let foodFactory = (name, type, ethnic, barcode) => {
     const section = document.querySelector('.foodList')
     const article1 = document.createElement('article');
     const h2 = document.createElement('h2');
@@ -16,21 +16,19 @@ let foodFactory = (name, type, ethnic, barcode, jsonResponse) => {
     article1.appendChild(p2);
     p2.textContent = ethnic
 
-    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-    .then(response => response.json())
-    .then(productInfo => {
-        productInfo.forEach(reponse => {
-
-        })
-    })
+    //BARCODE AND FRIENDS
+    const p3 = document.createElement('p');
+    article1.appendChild(p3);
+    p3.textContent = sexyStuff(barcode);
+    
+    
+    
+    
+    
+    
+    
 
 };
-
-
-
-
-
-
 
 
 fetch("http://localhost:8088/food")
@@ -40,17 +38,25 @@ fetch("http://localhost:8088/food")
             const foodAsHTML = foodFactory(food.name, food.type, food.ethnicity, food.barcode)
         
         })
+    });
+    
+
+    
+let sexyStuff = (barcode) => {
+    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+    .then(response => response.json())
+    .then(productInfo => {
+        return 'bummer';
     })
 
+}; //sexystuff function end
+
+
+
     
 
 
-
-
     
-
-
-
 
 
 
