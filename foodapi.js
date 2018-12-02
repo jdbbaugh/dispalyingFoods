@@ -1,5 +1,5 @@
 
-let barcodeForFetch = ''
+
 
 
 let foodFactory = (name, type, ethnic, barcode) => {
@@ -16,21 +16,41 @@ let foodFactory = (name, type, ethnic, barcode) => {
     article1.appendChild(p2);
     p2.textContent = ethnic
 
-    //BARCODE AND FRIENDS
+    //begin listMaker function
+let listMaker = (ingredient) => {
+    
     const p3 = document.createElement('p');
     article1.appendChild(p3);
-    p3.textContent = sexyStuff(barcode);
+    p3.textContent = ingredient;
     
     
-    
-    
-    
-    
-    
-
 };
+//end of listMaker
+
+    //fetch from openFoods
+fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+.then(foods => foods.json())
+.then(parsedFoods => {
+    for (var property1 in parsedFoods) {
+        let ingredients = parsedFoods[property1].ingredients;
+        console.log(ingredients)
+        if (ingredients !== undefined) {
+        ingredients.forEach(item => {
+            const theStuff = listMaker(item.text);
+        })
+        }
+      } 
+});
+//End of Fetch
+
+   
+
+    
+};
+//end of foodFactory
 
 
+//fetch list from local json
 fetch("http://localhost:8088/food")
     .then(foods => foods.json())
     .then(parsedFoods => {
@@ -39,17 +59,16 @@ fetch("http://localhost:8088/food")
         
         })
     });
+    //end of fetch from local json
     
 
-    
-let sexyStuff = (barcode) => {
-    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-    .then(response => response.json())
-    .then(productInfo => {
-        return 'bummer';
-    })
 
-}; //sexystuff function end
+
+
+
+
+
+
 
 
 
