@@ -6,8 +6,9 @@ let foodFactory = (name, type, ethnic, barcode) => {
     const section = document.querySelector('.foodList')
     const article1 = document.createElement('article');
     const h2 = document.createElement('h2');
-    const p = document.createElement('p');
-    const p2 = document.createElement('p');
+    const p = document.createElement('h3');
+    const p2 = document.createElement('h3');
+    const p3 = document.createElement('p');
     section.appendChild(article1);
     article1.appendChild(h2);
     h2.textContent = name
@@ -15,15 +16,14 @@ let foodFactory = (name, type, ethnic, barcode) => {
     p.textContent = type
     article1.appendChild(p2);
     p2.textContent = ethnic
+    article1.appendChild(p3);
+    p3.textContent = 'INGREDIENTS: '
+
 
     //begin listMaker function
 let listMaker = (ingredient) => {
     
-    const p3 = document.createElement('p');
-    article1.appendChild(p3);
-    p3.textContent = ingredient;
-    
-    
+    p3.textContent += `${ingredient}, `;
 };
 //end of listMaker
 
@@ -42,10 +42,6 @@ fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
       } 
 });
 //End of Fetch
-
-   
-
-    
 };
 //end of foodFactory
 
