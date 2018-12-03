@@ -1,7 +1,7 @@
 section {
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
     background-color: lightcyan;
     border: 10px solid lightcoral;
     
@@ -10,6 +10,9 @@ section {
 }
 
 article {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
     margin: 10px;
     border: 3px solid plum;
     border-radius: 5px;
@@ -23,5 +26,9 @@ h2 {
     border-radius: 50px;
     padding: 5px;
     color: peru;
+}
+
+p {
+   
 }
 
