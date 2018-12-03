@@ -1,6 +1,7 @@
 section {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    
     background-color: lightcyan;
     border: 10px solid lightcoral;
     
@@ -23,3 +24,4 @@ h2 {
     padding: 5px;
     color: peru;
 }
+
