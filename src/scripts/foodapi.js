@@ -13,7 +13,8 @@ let foodFactory = (name, type, ethnic, barcode) => {
     article1.appendChild(h2);
     h2.textContent = name
     article1.appendChild(p);
-    p.textContent = type
+    p.classList.add('featured')
+    p.textContent = type.toUpperCase();
     article1.appendChild(p2);
     p2.textContent = ethnic
     article1.appendChild(p3);

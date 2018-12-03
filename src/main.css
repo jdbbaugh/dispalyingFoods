@@ -29,6 +29,16 @@ h2 {
     color: peru;
 }
 
+h3 {
+    text-align: center;
+    font-family: 'Kumar One Outline', cursive;
+
+}
+
+.featured {
+    background-color: lavender;
+}
+
 p {
    
 }

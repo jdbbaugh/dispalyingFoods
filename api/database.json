@@ -10,7 +10,7 @@
     {
       "id": 3,
       "name": "Green curry",
-      "type": "curry",
+      "type": "another curry",
       "ethnicity": "thai",
       "barcode": "0044738102353"
     },
@@ -37,7 +37,7 @@
     },
     {
       "name": "Red Curry",
-      "type": "cury",
+      "type": "different cury",
       "ethnicity": "Indian",
       "barcode": "0044738201698",
       "id": 7
